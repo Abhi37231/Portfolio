@@ -86,7 +86,7 @@ h2 {
 
 .card:hover {
   transform:translateY(-8px);
-  box-shadow:0 10px 25px rgba(56,189,248,0.2);
+  box-shadow: 0 0 20px rgba(56,189,248,0.3), 0 10px 25px rgba(0,0,0,0.5);
 }
 
 .card img {
@@ -129,7 +129,7 @@ iframe {
 }
 
 .resume-btn:hover {
-  transform:scale(1.05);
+  transform: translateY(-3px) scale(1.03);
 }
 
 footer {
@@ -142,26 +142,6 @@ footer {
   iframe{display:none;}
 }
 
-
-
-/* ✨ Extra Enhancements (non-breaking) */
-
-/* Glow effect on hover */
-.card:hover {
-  box-shadow: 0 0 20px rgba(56,189,248,0.3), 0 10px 25px rgba(0,0,0,0.5);
-}
-
-/* Smooth button hover */
-.resume-btn:hover {
-  transform: translateY(-3px) scale(1.03);
-}
-
-/* Section fade spacing improvement */
-section {
-  transition: all 0.3s ease;
-}
-
-/* Scroll indicator */
 body::before {
   content: '';
   position: fixed;
@@ -172,7 +152,6 @@ body::before {
   background: linear-gradient(90deg,#38bdf8,#22c55e);
   z-index: 2000;
 }
-
 </style>
 </head>
 
@@ -182,6 +161,7 @@ body::before {
   <div><b>Abhi.dev</b></div>
   <div>
     <a href="#about">About</a>
+    <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
@@ -191,13 +171,62 @@ body::before {
 <header data-aos="fade-up">
   <h1>Abhinandan Yalamante</h1>
   <p class="typing" id="typing"></p>
+  <p style="margin-top:10px; color:#22c55e;">
+    🚀 Building Real-World Apps | Open to Opportunities
+  </p>
 </header>
 
+<!-- ABOUT -->
 <section id="about" data-aos="fade-up">
   <h2>About Me</h2>
-  <p>I am a Mobile App Developer specializing in Flutter & Android, building real-world apps with clean UI and performance focus.</p>
+  <p>
+  I am a passionate Mobile App Developer specializing in Flutter & Android, focused on building real-world, scalable applications with clean UI and optimized performance.
+
+  I enjoy solving real-life problems through apps like billing systems and expense trackers. I have hands-on experience with Firebase, REST APIs, and local storage.
+
+  Currently, I am exploring advanced Flutter concepts, backend integration, and improving user experience through smart automation features.
+  </p>
 </section>
 
+<!-- SKILLS -->
+<section id="skills" data-aos="fade-up">
+  <h2>Skills</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>📱 Mobile Development</h3>
+      <p>Flutter, Dart, Android (Basic)</p>
+    </div>
+
+    <div class="card">
+      <h3>🔥 Backend & Database</h3>
+      <p>Firebase, Firestore, Local Storage</p>
+    </div>
+
+    <div class="card">
+      <h3>🌐 API Integration</h3>
+      <p>REST APIs, JSON Parsing</p>
+    </div>
+
+    <div class="card">
+      <h3>💻 Programming</h3>
+      <p>Dart, Java, SQL (MySQL)</p>
+    </div>
+
+    <div class="card">
+      <h3>🛠 Tools</h3>
+      <p>Git, GitHub, VS Code, Android Studio</p>
+    </div>
+
+    <div class="card">
+      <h3>🎯 Other Skills</h3>
+      <p>UI Design, Debugging, Problem Solving</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
 <section id="projects" data-aos="fade-up">
   <h2>Projects</h2>
   <div class="grid">
@@ -206,6 +235,7 @@ body::before {
       <img src="assignmate.png">
       <h3>AssignMate</h3>
       <p>Student resource sharing app</p>
+      <p><b>Tech:</b> Flutter • Firebase • Dart</p>
       <a href="https://github.com/Abhi37231/Assign_Mate.git" target="_blank">View Code →</a>
     </div>
 
@@ -213,6 +243,7 @@ body::before {
       <img src="billing.png">
       <h3>Billing App</h3>
       <p>Shop billing system</p>
+      <p><b>Tech:</b> Flutter • Dart • Firebase • Local Storage</p>
       <a href="https://github.com/Abhi37231/Billing_App.git" target="_blank">View Code →</a>
     </div>
 
@@ -220,18 +251,29 @@ body::before {
       <img src="weather.png">
       <h3>Weather App</h3>
       <p>API based app</p>
+      <p><b>Tech:</b> Flutter • REST API • Dart</p>
       <a href="https://github.com/Abhi37231/weather_app.git" target="_blank">View Code →</a>
+    </div>
+
+    <div class="card">
+      <img src="expense.png">
+      <h3>Expense Tracker</h3>
+      <p>Track daily expenses with smart insights</p>
+      <p><b>Tech:</b> Flutter • Local Storage • UI/UX</p>
+      <a href="#" target="_blank">View Code →</a>
     </div>
 
   </div>
 </section>
 
+<!-- RESUME -->
 <section id="resume" data-aos="fade-up">
   <h2>Resume</h2>
   <iframe src="resume_v1.pdf"></iframe>
   <a href="resume_v1.pdf" target="_blank" class="resume-btn">📄 View Resume</a>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" data-aos="fade-up">
   <h2>Contact</h2>
   <p>📞 9545009700</p>
@@ -256,22 +298,6 @@ function type(){
  }
 }
 type();
-</script>
-
-
-
-<!-- ✨ Extra: Scroll Reveal Effect -->
-<script>
-window.addEventListener('scroll', () => {
-  const elements = document.querySelectorAll('.card');
-  elements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if(rect.top < window.innerHeight - 50){
-      el.style.opacity = 1;
-      el.style.transform = 'translateY(0)';
-    }
-  });
-});
 </script>
 
 </body>

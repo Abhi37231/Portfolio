@@ -6,8 +6,6 @@
   <title>Abhinandan Yalamante | Portfolio</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <style>
@@ -17,6 +15,7 @@
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #0f172a, #020617);
       color: #e2e8f0;
+      overflow-x: hidden;
     }
 
     nav {
@@ -29,6 +28,12 @@
       display: flex;
       justify-content: space-between;
       z-index: 1000;
+      animation: slideDown 0.8s ease;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
     }
 
     nav a {
@@ -37,6 +42,22 @@
       text-decoration: none;
       font-size: 14px;
       font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #38bdf8;
+      left: 0;
+      bottom: -4px;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
     }
 
     header {
@@ -44,7 +65,15 @@
       padding: 130px 20px 60px;
     }
 
-    h1 { font-size: 2.8rem; }
+    h1 {
+      font-size: 2.8rem;
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
     .typing {
       color: #38bdf8;
@@ -71,18 +100,24 @@
       backdrop-filter: blur(10px);
       padding: 20px;
       border-radius: 12px;
-      transition: 0.3s;
+      transition: 0.4s;
+      transform: translateY(0);
     }
 
     .card:hover {
-      transform: translateY(-6px) scale(1.02);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.5);
     }
 
     .card img {
       width: 100%;
       border-radius: 8px;
       margin-bottom: 10px;
+      transition: 0.4s;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
     }
 
     iframe {
@@ -190,6 +225,7 @@
   <h2>Contact</h2>
   <p>Email: abhinandanyalamante33@gmail.com</p>
   <p>GitHub: <a href="https://github.com/Abhi37231">github.com/Abhi37231</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/abhinandan-yalamante-8285112b2" target="_blank">View Profile</a></p>
 </section>
 
 <footer>© 2026 Abhinandan Yalamante</footer>

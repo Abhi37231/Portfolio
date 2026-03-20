@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Abhinandan Yalamante | Portfolio</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
@@ -23,7 +25,7 @@
       top: 0;
       background: rgba(15,23,42,0.8);
       backdrop-filter: blur(10px);
-      padding: 10px 20px;
+      padding: 12px 30px;
       display: flex;
       justify-content: space-between;
       z-index: 1000;
@@ -31,36 +33,24 @@
 
     nav a {
       color: #38bdf8;
-      margin-left: 15px;
+      margin-left: 20px;
       text-decoration: none;
       font-size: 14px;
+      font-weight: 500;
     }
 
     header {
       text-align: center;
-      padding: 120px 20px 60px;
+      padding: 130px 20px 60px;
     }
 
-    h1 { font-size: 2.5rem; }
+    h1 { font-size: 2.8rem; }
 
     .typing {
       color: #38bdf8;
-      font-weight: 500;
       margin-top: 10px;
+      font-weight: 500;
     }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 16px;
-      background: #38bdf8;
-      color: #000;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .btn:hover { transform: scale(1.05); }
 
     section { padding: 60px 10%; }
 
@@ -85,7 +75,7 @@
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px) scale(1.02);
       box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     }
 
@@ -95,6 +85,11 @@
       margin-bottom: 10px;
     }
 
+    iframe {
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
     footer {
       text-align: center;
       padding: 30px;
@@ -102,104 +97,96 @@
     }
   </style>
 </head>
+
 <body>
 
 <nav>
-  <div>Abhi.dev</div>
+  <div><b>Abhi.dev</b></div>
   <div>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
-<header>
+<header data-aos="fade-up">
   <h1>Abhinandan Yalamante</h1>
   <p class="typing" id="typing"></p>
-  <a href="resume.pdf" class="btn">Download Resume</a>
 </header>
 
-<section id="about">
+<section id="about" data-aos="fade-right">
   <h2>About Me</h2>
-  <p>
-    I am a third-year B.Tech student and a <b>Mobile Application Developer</b> specializing in <b>Flutter</b> and <b>Android (Java)</b>. I enjoy building real-world apps that solve practical problems.
-  </p>
-  <br/>
-  <p>
-    I have developed multiple applications including a <b>student resource sharing platform (AssignMate)</b> and a <b>billing system used in a real shop</b>. I focus on clean UI, usability, and efficient data handling.
-  </p>
-  <br/>
-  <p>
-    I actively use <b>AI tools</b> to speed up development, debug faster, and learn new concepts quickly—allowing me to build better solutions in less time.
-  </p>
-  <br/>
+  <p>I am a third-year B.Tech student and a <b>Mobile Application Developer</b> specializing in Flutter and Android. I build real-world apps and use AI tools to improve development speed.</p>
 
-  <div class="grid">
-    <div class="card">
+  <div class="grid" style="margin-top:20px;">
+    <div class="card" data-aos="zoom-in">
       <h3>🚀 What I Do</h3>
-      <p>Build mobile apps using Flutter & Android with real-world use cases.</p>
+      <p>Build mobile apps using Flutter & Android.</p>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="zoom-in" data-aos-delay="100">
       <h3>💡 Strengths</h3>
-      <p>Problem solving, fast learning, and consistent development practice.</p>
+      <p>Problem solving, fast learning, consistency.</p>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="zoom-in" data-aos-delay="200">
       <h3>🤖 AI Advantage</h3>
-      <p>Use AI tools to improve productivity, debugging, and development speed.</p>
+      <p>Use AI tools for faster development & debugging.</p>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="zoom-in" data-aos-delay="300">
       <h3>🎯 Goal</h3>
-      <p>To gain real-world experience through internships and grow as a software developer.</p>
+      <p>To become a skilled software developer through internships.</p>
     </div>
   </div>
 </section>
 
-<section id="projects">
+<section id="projects" data-aos="fade-up">
   <h2>Projects</h2>
   <div class="grid">
 
-
-    <div class="card">
-      <img src="Exp.png" alt="Expense">
-      <h3>Expense Tracker</h3>
-      <p>Manage expenses.</p>
-      <p><b>Impact:</b> Financial tracking.</p>
-      <a href="https://github.com/Abhi37231/expanse_tracker_new.git" class="btn">GitHub</a>
-    </div>
-
-    <div class="card">
-      <img src="assignmate.png" alt="AssignMate">
+    <div class="card" data-aos="flip-left">
+      <img src="assignmate.png">
       <h3>AssignMate</h3>
-      <p>Share assignments, notes, PYQs.</p>
-      <p><b>Impact:</b> Solves student resource problem.</p>
-      <a href="https://github.com/Abhi37231/Assign_Mate.git" class="btn">GitHub</a>
+      <p>Share assignments, notes, PYQs</p>
+      <p><b>Impact:</b> Solves student resource problem</p>
+      <a href="https://github.com/Abhi37231/Assign_Mate.git">GitHub</a>
     </div>
 
-    <div class="card">
-      <img src="billing.png" alt="Billing">
+    <div class="card" data-aos="flip-left" data-aos-delay="100">
+      <img src="billing.png">
       <h3>Billing App</h3>
-      <p>Shop billing system.</p>
-      <p><b>Impact:</b> Improves efficiency.</p>
-      <a href="https://github.com/Abhi37231/Billing_App.git" class="btn">GitHub</a>
+      <p>Shop billing system</p>
+      <p><b>Impact:</b> Improves efficiency</p>
+      <a href="https://github.com/Abhi37231/Billing_App.git">GitHub</a>
     </div>
 
-    <div class="card">
-      <img src="weather.png" alt="Weather">
+    <div class="card" data-aos="flip-left" data-aos-delay="200">
+      <img src="weather.png">
       <h3>Weather App</h3>
-      <p>Real-time API weather.</p>
-      <p><b>Impact:</b> API skills.</p>
-      <a href="https://github.com/Abhi37231/weather_app.git" class="btn">GitHub</a>
+      <p>API based weather</p>
+      <p><b>Impact:</b> API skills</p>
+      <a href="https://github.com/Abhi37231/weather_app.git">GitHub</a>
     </div>
 
-    
+    <div class="card" data-aos="flip-left" data-aos-delay="300">
+      <img src="Exp.png">
+      <h3>Expense Tracker</h3>
+      <p>Manage expenses</p>
+      <p><b>Impact:</b> Financial tracking</p>
+      <a href="https://github.com/Abhi37231/expanse_tracker_new.git">GitHub</a>
+    </div>
 
   </div>
 </section>
 
-<section id="contact">
+<section id="resume" data-aos="fade-up">
+  <h2>Resume</h2>
+  <iframe src="resume.pdf" width="100%" height="500px"></iframe>
+</section>
+
+<section id="contact" data-aos="fade-up">
   <h2>Contact</h2>
   <p>Email: abhinandanyalamante33@gmail.com</p>
   <p>GitHub: <a href="https://github.com/Abhi37231">github.com/Abhi37231</a></p>
@@ -207,7 +194,10 @@
 
 <footer>© 2026 Abhinandan Yalamante</footer>
 
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
+AOS.init({ duration: 1000, once: true });
+
 const text = "Mobile App Developer | Flutter & Android | AI-Driven";
 let i = 0;
 function type() {

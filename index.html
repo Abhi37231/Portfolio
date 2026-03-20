@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abhinandan Yalamante | Portfolio</title>
+<title>Abhinandan Yalamante | Flutter Mobile App Developer Portfolio</title>
+
+  <meta name="description" content="Abhinandan Yalamante - Third-year B.Tech student specializing in Flutter and Android app development. Portfolio of real-world mobile apps.">
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -27,8 +31,54 @@
       padding: 12px 30px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       z-index: 1000;
       animation: slideDown 0.8s ease;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 5px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .nav-links.active {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: rgba(15,23,42,0.95);
+      flex-direction: column;
+      padding: 20px 0;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: #38bdf8;
+      margin: 3px 0;
+      transition: 0.3s;
+      border-radius: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
     }
 
     @keyframes slideDown {
@@ -128,56 +178,44 @@
     }
 
     /* Mobile fix */
-    @media (max-width: 768px) {
-      /* Mobile: same as desktop (show resume preview) */
-      iframe {
+@media (max-width: 768px) {
+      nav .nav-links {
+        display: none;
+      }
+      nav .hamburger {
         display: block;
-        width: 100%;
-        height: 500px;
       }
-
-      /* Hide buttons only */
-      .resume-btn {
-        display: none;
-      }
-    }
-
-      .resume-btn {
-        display: none;
-      }
-    }
-
+      
       section {
-        padding: 0;
-      }
-
-      #resume {
-        display: block;
-        height: 100vh;
+        padding: 40px 20px;
       }
 
       iframe {
-        display: block;
-        width: 100%;
-        height: 100vh;
-        border-radius: 0;
-        margin: 0;
+        display: none;
       }
 
       .resume-btn {
-        display: none;
-      }
-    }
-      .resume-btn {
-        display: block;
-        margin-top: 15px;
-        padding: 12px;
+        display: block !important;
+        margin: 20px auto;
+        padding: 15px 30px;
         text-align: center;
-        background: #38bdf8;
-        color: #000;
-        border-radius: 8px;
+        background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+        color: white;
+        border: none;
+        border-radius: 50px;
         font-weight: 600;
         text-decoration: none;
+        font-size: 16px;
+        box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+      }
+
+      .resume-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(56, 189, 248, 0.6);
+      }
+
+      h1 {
+        font-size: 2.2rem;
       }
     }
 
@@ -191,13 +229,18 @@
 
 <body>
 
-<nav>
+<nav role="navigation" aria-label="Main navigation">
   <div><b>Abhi.dev</b></div>
-  <div>
+  <div class="nav-links">
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
+  </div>
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 </nav>
 
@@ -238,35 +281,35 @@
   <div class="grid">
 
     <div class="card" data-aos="flip-left">
-      <img src="assignmate.png">
+      <img src="assignmate.png" alt="Screenshot of AssignMate app - assignment sharing platform">
       <h3>AssignMate</h3>
       <p>Share assignments, notes, PYQs</p>
       <p><b>Impact:</b> Solves student resource problem</p>
-      <a href="https://github.com/Abhi37231/Assign_Mate.git">GitHub</a>
+      <a href="https://github.com/Abhi37231/Assign_Mate.git" target="_blank" rel="noopener">GitHub</a>
     </div>
 
     <div class="card" data-aos="flip-left" data-aos-delay="100">
-      <img src="billing.png">
+      <img src="billing.png" alt="Screenshot of Billing App - shop billing system">
       <h3>Billing App</h3>
       <p>Shop billing system</p>
       <p><b>Impact:</b> Improves efficiency</p>
-      <a href="https://github.com/Abhi37231/Billing_App.git">GitHub</a>
+      <a href="https://github.com/Abhi37231/Billing_App.git" target="_blank" rel="noopener">GitHub</a>
     </div>
 
     <div class="card" data-aos="flip-left" data-aos-delay="200">
-      <img src="weather.png">
+      <img src="weather.png" alt="Screenshot of Weather App - API based weather forecast">
       <h3>Weather App</h3>
       <p>API based weather</p>
       <p><b>Impact:</b> API skills</p>
-      <a href="https://github.com/Abhi37231/weather_app.git">GitHub</a>
+      <a href="https://github.com/Abhi37231/weather_app.git" target="_blank" rel="noopener">GitHub</a>
     </div>
 
     <div class="card" data-aos="flip-left" data-aos-delay="300">
-      <img src="Exp.png">
+      <img src="Exp.png" alt="Screenshot of Expense Tracker app - personal finance manager">
       <h3>Expense Tracker</h3>
       <p>Manage expenses</p>
       <p><b>Impact:</b> Financial tracking</p>
-      <a href="https://github.com/Abhi37231/expanse_tracker_new.git">GitHub</a>
+      <a href="https://github.com/Abhi37231/expanse_tracker_new.git" target="_blank" rel="noopener">GitHub</a>
     </div>
 
   </div>
@@ -276,24 +319,40 @@
   <h2>Resume</h2>
   <iframe src="resume.pdf"></iframe>
 
-  <!-- Buttons -->
-  <a href="#resume" class="resume-btn" style="background:#22c55e;">📄 Open Resume</a>
-  <a href="resume.pdf" download class="resume-btn" style="background:#0ea5e9; margin-top:10px;">⬇️ Download Resume</a>
+  <!-- Single Button -->
+  <a href="resume.pdf" target="_blank" class="resume-btn" style="background:#22c55e;">📄 View Resume</a>
 </section>
 
 <section id="contact" data-aos="fade-up">
   <h2>Contact</h2>
   <p><b>Contact No:</b> 9545009700</p>
   <p><b>Email:</b> abhinandanyalamante33@gmail.com</p>
-  <p><b>GitHub:</b> <a href="https://github.com/Abhi37231">github.com/Abhi37231</a></p>
+  <p><b>GitHub:</b> <a href="https://github.com/Abhi37231" target="_blank" rel="noopener">github.com/Abhi37231</a></p>
   <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/abhinandan-yalamante-8285112b2" target="_blank">View Profile</a></p>
 </section>
 
-<footer>© 2026 Abhinandan Yalamante</footer>
+© 2024 Abhinandan Yalamante. All rights reserved.
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
 AOS.init({ duration: 1000, once: true });
+
+// Mobile nav toggle
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  hamburger.classList.toggle('active');
+});
+
+// Close mobile menu on link click
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    hamburger.classList.remove('active');
+  });
+});
 
 const text = "Mobile App Developer | Flutter & Android | AI-Driven";
 let i = 0;

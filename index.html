@@ -5,242 +5,186 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Abhinandan Yalamante | Flutter Mobile App Developer Portfolio</title>
 
-  <meta name="description" content="Abhinandan Yalamante - Third-year B.Tech student specializing in Flutter and Android app development. Portfolio of real-world mobile apps.">
-  
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+<meta name="description" content="Abhinandan Yalamante - Flutter & Android Developer Portfolio">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+<style>
+* { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0f172a, #020617);
-      color: #e2e8f0;
-      overflow-x: hidden;
-    }
+body {
+  font-family:'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color:#e2e8f0;
+}
 
-    nav {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background: rgba(15,23,42,0.8);
-      backdrop-filter: blur(10px);
-      padding: 12px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      animation: slideDown 0.8s ease;
-    }
+nav {
+  position:fixed;
+  width:100%;
+  top:0;
+  background:rgba(15,23,42,0.7);
+  backdrop-filter: blur(12px);
+  padding:12px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+}
 
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      padding: 5px;
-    }
+nav a {
+  color:#38bdf8;
+  margin-left:20px;
+  text-decoration:none;
+  font-size:14px;
+  transition:0.3s;
+}
 
-    .hamburger.active span:nth-child(1) {
-      transform: rotate(-45deg) translate(-5px, 6px);
-    }
+nav a:hover {
+  color:#0ea5e9;
+}
 
-    .hamburger.active span:nth-child(2) {
-      opacity: 0;
-    }
+header {
+  text-align:center;
+  padding:140px 20px 60px;
+}
 
-    .hamburger.active span:nth-child(3) {
-      transform: rotate(45deg) translate(-5px, -6px);
-    }
+h1 {
+  font-size:3rem;
+  background:linear-gradient(90deg,#38bdf8,#22c55e);
+  -webkit-background-clip:text;
+  color:transparent;
+}
 
-    .nav-links.active {
-      position: fixed;
-      top: 70px;
-      left: 0;
-      width: 100%;
-      background: rgba(15,23,42,0.95);
-      flex-direction: column;
-      padding: 20px 0;
-      gap: 20px;
-      text-align: center;
-    }
+.typing {
+  margin-top:10px;
+  color:#94a3b8;
+}
 
-    .hamburger span {
-      width: 25px;
-      height: 3px;
-      background: #38bdf8;
-      margin: 3px 0;
-      transition: 0.3s;
-      border-radius: 2px;
-    }
+section { padding:60px 10%; }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-    }
+h2 {
+  margin-bottom:20px;
+  font-size:1.6rem;
+  border-left:4px solid #38bdf8;
+  padding-left:10px;
+}
 
-    @keyframes slideDown {
-      from { transform: translateY(-100%); }
-      to { transform: translateY(0); }
-    }
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
 
-    nav a {
-      color: #38bdf8;
-      margin-left: 20px;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-      position: relative;
-    }
+.card {
+  background:rgba(30,41,59,0.5);
+  border:1px solid rgba(56,189,248,0.2);
+  padding:20px;
+  border-radius:14px;
+  transition:0.4s;
+}
 
-    nav a::after {
-      content: "";
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      background: #38bdf8;
-      left: 0;
-      bottom: -4px;
-      transition: 0.3s;
-    }
+.card:hover {
+  transform:translateY(-8px);
+  box-shadow:0 10px 25px rgba(56,189,248,0.2);
+}
 
-    nav a:hover::after {
-      width: 100%;
-    }
+.card img {
+  width:100%;
+  border-radius:10px;
+}
 
-    header {
-      text-align: center;
-      padding: 130px 20px 60px;
-    }
+.card h3 {
+  margin-top:10px;
+}
 
-    h1 {
-      font-size: 2.8rem;
-      animation: fadeIn 1.5s ease;
-    }
+.card a {
+  display:inline-block;
+  margin-top:10px;
+  color:#22c55e;
+  text-decoration:none;
+  font-weight:600;
+}
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+iframe {
+  width:100%;
+  height:500px;
+  border-radius:12px;
+  border:none;
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
 
-    .typing {
-      color: #38bdf8;
-      margin-top: 10px;
-      font-weight: 500;
-    }
+.resume-btn {
+  display:block;
+  margin:20px auto;
+  padding:14px 28px;
+  border-radius:50px;
+  text-align:center;
+  font-weight:600;
+  background:linear-gradient(90deg,#22c55e,#0ea5e9);
+  color:#fff;
+  text-decoration:none;
+  width:max-content;
+  transition:0.3s;
+}
 
-    section { padding: 60px 10%; }
+.resume-btn:hover {
+  transform:scale(1.05);
+}
 
-    h2 {
-      margin-bottom: 20px;
-      border-left: 4px solid #38bdf8;
-      padding-left: 10px;
-    }
+footer {
+  text-align:center;
+  padding:30px;
+  color:#64748b;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+@media(max-width:768px){
+  iframe{display:none;}
+}
 
-    .card {
-      background: rgba(30,41,59,0.7);
-      backdrop-filter: blur(10px);
-      padding: 20px;
-      border-radius: 12px;
-      transition: 0.4s;
-      transform: translateY(0);
-    }
 
-    .card:hover {
-      transform: translateY(-10px) scale(1.03);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.5);
-    }
 
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 10px;
-      transition: 0.4s;
-    }
+/* ✨ Extra Enhancements (non-breaking) */
 
-    .card:hover img {
-      transform: scale(1.05);
-    }
+/* Glow effect on hover */
+.card:hover {
+  box-shadow: 0 0 20px rgba(56,189,248,0.3), 0 10px 25px rgba(0,0,0,0.5);
+}
 
-    iframe {
-      border-radius: 10px;
-      margin-top: 20px;
-      width: 100%;
-      height: 500px;
-    }
+/* Smooth button hover */
+.resume-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+}
 
-    /* Mobile fix */
-@media (max-width: 768px) {
-      nav .nav-links {
-        display: none;
-      }
-      nav .hamburger {
-        display: block;
-      }
-      
-      section {
-        padding: 40px 20px;
-      }
+/* Section fade spacing improvement */
+section {
+  transition: all 0.3s ease;
+}
 
-      iframe {
-        display: none;
-      }
+/* Scroll indicator */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg,#38bdf8,#22c55e);
+  z-index: 2000;
+}
 
-      .resume-btn {
-        display: block !important;
-        margin: 20px auto;
-        padding: 15px 30px;
-        text-align: center;
-        background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-        color: white;
-        border: none;
-        border-radius: 50px;
-        font-weight: 600;
-        text-decoration: none;
-        font-size: 16px;
-        box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
-      }
-
-      .resume-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(56, 189, 248, 0.6);
-      }
-
-      h1 {
-        font-size: 2.2rem;
-      }
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #94a3b8;
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
-<nav role="navigation" aria-label="Main navigation">
+<nav>
   <div><b>Abhi.dev</b></div>
-  <div class="nav-links">
+  <div>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
-  </div>
-  <div class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
   </div>
 </nav>
 
@@ -249,67 +193,34 @@
   <p class="typing" id="typing"></p>
 </header>
 
-<section id="about" data-aos="fade-right">
+<section id="about" data-aos="fade-up">
   <h2>About Me</h2>
-  <p>I am a third-year B.Tech student and a <b>Mobile Application Developer</b> specializing in Flutter and Android. I build real-world apps and use AI tools to improve development speed.</p>
-
-  <div class="grid" style="margin-top:20px;">
-    <div class="card" data-aos="zoom-in">
-      <h3>🚀 What I Do</h3>
-      <p>Build mobile apps using Flutter & Android.</p>
-    </div>
-
-    <div class="card" data-aos="zoom-in" data-aos-delay="100">
-      <h3>💡 Strengths</h3>
-      <p>Problem solving, fast learning, consistency.</p>
-    </div>
-
-    <div class="card" data-aos="zoom-in" data-aos-delay="200">
-      <h3>🤖 AI Advantage</h3>
-      <p>Use AI tools for faster development & debugging.</p>
-    </div>
-
-    <div class="card" data-aos="zoom-in" data-aos-delay="300">
-      <h3>🎯 Goal</h3>
-      <p>To become a skilled software developer through internships.</p>
-    </div>
-  </div>
+  <p>I am a Mobile App Developer specializing in Flutter & Android, building real-world apps with clean UI and performance focus.</p>
 </section>
 
 <section id="projects" data-aos="fade-up">
   <h2>Projects</h2>
   <div class="grid">
 
-    <div class="card" data-aos="flip-left">
-      <img src="assignmate.png" alt="Screenshot of AssignMate app - assignment sharing platform">
+    <div class="card">
+      <img src="assignmate.png">
       <h3>AssignMate</h3>
-      <p>Share assignments, notes, PYQs</p>
-      <p><b>Impact:</b> Solves student resource problem</p>
-      <a href="https://github.com/Abhi37231/Assign_Mate.git" target="_blank" rel="noopener">GitHub</a>
+      <p>Student resource sharing app</p>
+      <a href="https://github.com/Abhi37231/Assign_Mate.git" target="_blank">View Code →</a>
     </div>
 
-    <div class="card" data-aos="flip-left" data-aos-delay="100">
-      <img src="billing.png" alt="Screenshot of Billing App - shop billing system">
+    <div class="card">
+      <img src="billing.png">
       <h3>Billing App</h3>
       <p>Shop billing system</p>
-      <p><b>Impact:</b> Improves efficiency</p>
-      <a href="https://github.com/Abhi37231/Billing_App.git" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/Abhi37231/Billing_App.git" target="_blank">View Code →</a>
     </div>
 
-    <div class="card" data-aos="flip-left" data-aos-delay="200">
-      <img src="weather.png" alt="Screenshot of Weather App - API based weather forecast">
+    <div class="card">
+      <img src="weather.png">
       <h3>Weather App</h3>
-      <p>API based weather</p>
-      <p><b>Impact:</b> API skills</p>
-      <a href="https://github.com/Abhi37231/weather_app.git" target="_blank" rel="noopener">GitHub</a>
-    </div>
-
-    <div class="card" data-aos="flip-left" data-aos-delay="300">
-      <img src="Exp.png" alt="Screenshot of Expense Tracker app - personal finance manager">
-      <h3>Expense Tracker</h3>
-      <p>Manage expenses</p>
-      <p><b>Impact:</b> Financial tracking</p>
-      <a href="https://github.com/Abhi37231/expanse_tracker_new.git" target="_blank" rel="noopener">GitHub</a>
+      <p>API based app</p>
+      <a href="https://github.com/Abhi37231/weather_app.git" target="_blank">View Code →</a>
     </div>
 
   </div>
@@ -317,53 +228,50 @@
 
 <section id="resume" data-aos="fade-up">
   <h2>Resume</h2>
-  <iframe src="resume.pdf"></iframe>
-
-  <!-- Single Button -->
-  <a href="resume.pdf" target="_blank" class="resume-btn" style="background:#22c55e;">📄 View Resume</a>
+  <iframe src="resume_v1.pdf"></iframe>
+  <a href="resume_v1.pdf" target="_blank" class="resume-btn">📄 View Resume</a>
 </section>
 
 <section id="contact" data-aos="fade-up">
   <h2>Contact</h2>
-  <p><b>Contact No:</b> 9545009700</p>
-  <p><b>Email:</b> abhinandanyalamante33@gmail.com</p>
-  <p><b>GitHub:</b> <a href="https://github.com/Abhi37231" target="_blank" rel="noopener">github.com/Abhi37231</a></p>
-  <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/abhinandan-yalamante-8285112b2" target="_blank">View Profile</a></p>
+  <p>📞 9545009700</p>
+  <p>📧 abhinandanyalamante33@gmail.com</p>
+  <p><a href="https://github.com/Abhi37231" target="_blank">GitHub</a></p>
+  <p><a href="https://www.linkedin.com/in/abhinandan-yalamante-8285112b2" target="_blank">LinkedIn</a></p>
 </section>
 
-
+<footer>© 2026 Abhi.dev</footer>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
-AOS.init({ duration: 1000, once: true });
+AOS.init({ duration:1000 });
 
-// Mobile nav toggle
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  hamburger.classList.toggle('active');
-});
-
-// Close mobile menu on link click
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-    hamburger.classList.remove('active');
-  });
-});
-
-const text = "Mobile App Developer | Flutter & Android | AI-Driven";
-let i = 0;
-function type() {
-  if (i < text.length) {
-    document.getElementById("typing").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(type, 50);
-  }
+const text="Mobile App Developer | Flutter & Android";
+let i=0;
+function type(){
+ if(i<text.length){
+  document.getElementById("typing").innerHTML+=text.charAt(i);
+  i++;
+  setTimeout(type,50);
+ }
 }
 type();
+</script>
+
+
+
+<!-- ✨ Extra: Scroll Reveal Effect -->
+<script>
+window.addEventListener('scroll', () => {
+  const elements = document.querySelectorAll('.card');
+  elements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 50){
+      el.style.opacity = 1;
+      el.style.transform = 'translateY(0)';
+    }
+  });
+});
 </script>
 
 </body>

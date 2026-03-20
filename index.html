@@ -1,87 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abhinandan Yalamante | Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #0f172a;
-      color: white;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f172a, #020617);
+      color: #e2e8f0;
     }
+
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(15,23,42,0.8);
+      backdrop-filter: blur(10px);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #38bdf8;
+      margin-left: 15px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
     header {
       text-align: center;
-      padding: 40px;
-      background: #1e293b;
+      padding: 120px 20px 60px;
     }
-    h1 { margin: 0; }
-    section { padding: 40px; }
-    .projects, .skills {
+
+    h1 { font-size: 2.5rem; }
+
+    .typing {
+      color: #38bdf8;
+      font-weight: 500;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 16px;
+      background: #38bdf8;
+      color: #000;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover { transform: scale(1.05); }
+
+    section { padding: 60px 10%; }
+
+    h2 {
+      margin-bottom: 20px;
+      border-left: 4px solid #38bdf8;
+      padding-left: 10px;
+    }
+
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
+
     .card {
-      background: #1e293b;
+      background: rgba(30,41,59,0.7);
+      backdrop-filter: blur(10px);
       padding: 20px;
-      border-radius: 10px;
+      border-radius: 12px;
+      transition: 0.3s;
     }
-    a { color: #38bdf8; }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #94a3b8;
+    }
   </style>
 </head>
 <body>
 
+<nav>
+  <div>Abhi.dev</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
 <header>
   <h1>Abhinandan Yalamante</h1>
-  <p>Flutter & Android Developer | AI Tools Enthusiast</p>
+  <p class="typing" id="typing"></p>
+  <a href="resume.pdf" class="btn">Download Resume</a>
 </header>
 
-<section>
+<section id="about">
   <h2>About Me</h2>
-  <p>I am a B.Tech student passionate about app development. I have built multiple apps using Flutter and Java, and I actively use AI tools to improve my productivity and learning.</p>
-</section>
+  <p>
+    I am a third-year B.Tech student and a <b>Mobile Application Developer</b> specializing in <b>Flutter</b> and <b>Android (Java)</b>. I enjoy building real-world apps that solve practical problems.
+  </p>
+  <br/>
+  <p>
+    I have developed multiple applications including a <b>student resource sharing platform (AssignMate)</b> and a <b>billing system used in a real shop</b>. I focus on clean UI, usability, and efficient data handling.
+  </p>
+  <br/>
+  <p>
+    I actively use <b>AI tools</b> to speed up development, debug faster, and learn new concepts quickly—allowing me to build better solutions in less time.
+  </p>
+  <br/>
 
-<section>
-  <h2>Skills</h2>
-  <div class="skills">
-    <div class="card">Flutter & Dart</div>
-    <div class="card">Java (Android)</div>
-    <div class="card">C++, Python, SQL</div>
-    <div class="card">HTML, CSS, JavaScript</div>
-    <div class="card">Firebase & APIs</div>
-    <div class="card">Git & GitHub</div>
+  <div class="grid">
+    <div class="card">
+      <h3>🚀 What I Do</h3>
+      <p>Build mobile apps using Flutter & Android with real-world use cases.</p>
+    </div>
+
+    <div class="card">
+      <h3>💡 Strengths</h3>
+      <p>Problem solving, fast learning, and consistent development practice.</p>
+    </div>
+
+    <div class="card">
+      <h3>🤖 AI Advantage</h3>
+      <p>Use AI tools to improve productivity, debugging, and development speed.</p>
+    </div>
+
+    <div class="card">
+      <h3>🎯 Goal</h3>
+      <p>To gain real-world experience through internships and grow as a software developer.</p>
+    </div>
   </div>
 </section>
 
-<section>
+<section id="projects">
   <h2>Projects</h2>
-  <div class="projects">
+  <div class="grid">
+
+
     <div class="card">
+      <img src="Exp.png" alt="Expense">
       <h3>Expense Tracker</h3>
-      <p>Flutter app to manage daily expenses.</p>
+      <p>Manage expenses.</p>
+      <p><b>Impact:</b> Financial tracking.</p>
+      <a href="https://github.com/Abhi37231/expanse_tracker_new.git" class="btn">GitHub</a>
     </div>
+
     <div class="card">
+      <img src="assignmate.png" alt="AssignMate">
+      <h3>AssignMate</h3>
+      <p>Share assignments, notes, PYQs.</p>
+      <p><b>Impact:</b> Solves student resource problem.</p>
+      <a href="https://github.com/Abhi37231/Assign_Mate.git" class="btn">GitHub</a>
+    </div>
+
+    <div class="card">
+      <img src="billing.png" alt="Billing">
       <h3>Billing App</h3>
-      <p>Shop billing system with real-world usage.</p>
+      <p>Shop billing system.</p>
+      <p><b>Impact:</b> Improves efficiency.</p>
+      <a href="#" class="btn">GitHub</a>
     </div>
+
     <div class="card">
+      <img src="weather.png" alt="Weather">
       <h3>Weather App</h3>
-      <p>API-based real-time weather app.</p>
+      <p>Real-time API weather.</p>
+      <p><b>Impact:</b> API skills.</p>
+      <a href="#" class="btn">GitHub</a>
     </div>
-    <div class="card">
-      <h3>To-Do App</h3>
-      <p>Task management app with CRUD features.</p>
-    </div>
+
+    
+
   </div>
 </section>
 
-<section>
+<section id="contact">
   <h2>Contact</h2>
   <p>Email: abhinandanyalamante33@gmail.com</p>
   <p>GitHub: <a href="https://github.com/Abhi37231">github.com/Abhi37231</a></p>
 </section>
+
+<footer>© 2026 Abhinandan Yalamante</footer>
+
+<script>
+const text = "Mobile App Developer | Flutter & Android | AI-Driven";
+let i = 0;
+function type() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(type, 50);
+  }
+}
+type();
+</script>
 
 </body>
 </html>

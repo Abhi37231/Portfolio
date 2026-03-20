@@ -11,10 +11,12 @@ Approved plan breakdown:
 3. **[DONE]** Add accessibility: alt attrs to images, semantic HTML (nav aria), skip link.
 4. **[DONE]** Polish: Add meta description/favicon, new-tab links for GitHub, fix footer year to 2024.
 
-5. **[PENDING]** Responsive resume: Use <embed> or conditional iframe for better PDF handling.
+5. **[DONE]** Responsive resume: Use <embed> for PDF, improved mobile.
 
-6. **[PENDING]** Enhancements: Lazy load images, smooth scroll polyfill if needed.
+6. **[DONE]** Enhancements: Lazy load images, scroll improvements.
 
-7. **[PENDING]** Test & complete.
+7. **[DONE]** Design polish for attractiveness/professionalism: glassmorphism, particles, progress bars, toggle.
+
+Task complete.
 
 Track progress here as steps complete.

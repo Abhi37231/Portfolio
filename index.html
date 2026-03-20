@@ -129,9 +129,32 @@
 
     /* Mobile fix */
     @media (max-width: 768px) {
-      iframe {
+      /* Show only resume section on mobile */
+      nav, header, #about, #projects, #contact, footer {
         display: none;
       }
+
+      section {
+        padding: 0;
+      }
+
+      #resume {
+        display: block;
+        height: 100vh;
+      }
+
+      iframe {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        margin: 0;
+      }
+
+      .resume-btn {
+        display: none;
+      }
+    }
       .resume-btn {
         display: block;
         margin-top: 15px;
@@ -240,16 +263,17 @@
   <h2>Resume</h2>
   <iframe src="resume.pdf"></iframe>
 
-  <!-- Mobile Buttons -->
-  <a href="resume.pdf" target="_blank" class="resume-btn">📄 Open Resume</a>
+  <!-- Buttons -->
+  <a href="#resume" class="resume-btn" style="background:#22c55e;">📄 Open Resume</a>
   <a href="resume.pdf" download class="resume-btn" style="background:#0ea5e9; margin-top:10px;">⬇️ Download Resume</a>
 </section>
 
 <section id="contact" data-aos="fade-up">
   <h2>Contact</h2>
-  <p>Email: abhinandanyalamante33@gmail.com</p>
-  <p>GitHub: <a href="https://github.com/Abhi37231">github.com/Abhi37231</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/abhinandan-yalamante-8285112b2" target="_blank">View Profile</a></p>
+  <p><b>Contact No:</b> 9545009700</p>
+  <p><b>Email:</b> abhinandanyalamante33@gmail.com</p>
+  <p><b>GitHub:</b> <a href="https://github.com/Abhi37231">github.com/Abhi37231</a></p>
+  <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/abhinandan-yalamante-8285112b2" target="_blank">View Profile</a></p>
 </section>
 
 <footer>© 2026 Abhinandan Yalamante</footer>
